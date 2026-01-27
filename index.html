@@ -12,22 +12,18 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="logo">GO-DIGITAL</div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#founder">Founder</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#strategy">Strategy</a></li>
-                <li><a href="#scope">Scope Of Work</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <div class="navbar-container">
+            <a href="#home" class="navbar-logo">GO-DIGITAL</a>
+            <ul class="navbar-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="navbar-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -48,178 +44,22 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <!-- Fixed Left Rail -->
-            <div class="about-rail">
-                <div class="rail-content">
-                    <h2 class="rail-title">ABOUT</h2>
-                    <div class="rail-divider"></div>
-                    <nav class="rail-index">
-                        <a href="#about-strategic" class="rail-item active" data-service="strategic">
-                            <span class="rail-number">01</span>
-                            <span class="rail-label">Strategic Consulting</span>
-                        </a>
-                        <a href="#about-residential" class="rail-item" data-service="residential">
-                            <span class="rail-number">02</span>
-                            <span class="rail-label">Residential Broking</span>
-                        </a>
-                        <a href="#about-advisory" class="rail-item" data-service="advisory">
-                            <span class="rail-number">03</span>
-                            <span class="rail-label">Advisory</span>
-                        </a>
-                        <a href="#about-investment" class="rail-item" data-service="investment">
-                            <span class="rail-number">04</span>
-                            <span class="rail-label">Investment Management</span>
-                        </a>
-                        <a href="#about-digital" class="rail-item" data-service="digital">
-                            <span class="rail-number">05</span>
-                            <span class="rail-label">Digital Marketing</span>
-                        </a>
-                        <a href="#about-sales" class="rail-item" data-service="sales">
-                            <span class="rail-number">06</span>
-                            <span class="rail-label">Sales & Marketing</span>
-                        </a>
-                    </nav>
-                </div>
-            </div>
-
-            <!-- Scrollable Right Content -->
-            <div class="about-content-area">
-                <!-- Strategic Consulting -->
-                <div id="about-strategic" class="service-module" data-service="strategic">
-                    <h3 class="service-title">Strategic Consulting</h3>
-                    <p class="service-subline">End-to-End Project Management & Partnerships</p>
-                    <div class="service-description">
-                        <p>We engage at the foundation of real estate ventures. Our strategic consulting spans planning, structuring, execution, and partnership alignment, ensuring projects progress with clarity and intent.</p>
-                        <p>By integrating stakeholders and managing execution holistically, we bring discipline and coherence to complex developments.</p>
-                    </div>
+    <!-- Driven Section -->
+    <section id="driven" class="driven-section">
+        <div class="driven-container">
+            <div class="driven-content-wrapper">
+                <!-- Left Side - Text Content -->
+                <div class="driven-text-content animate-on-scroll">
+                    <h2 class="driven-headline">Real Estate</h2>
+                    <p class="driven-tagline">As the world shifts, build a stronger foundation</p>
                 </div>
 
-                <!-- Residential Broking -->
-                <div id="about-residential" class="service-module" data-service="residential">
-                    <h3 class="service-title">Residential Broking</h3>
-                    <div class="service-description">
-                        <p>We manage residential transactions with emphasis on transparency and precision. Our role is to align market demand with accurately positioned inventory, ensuring confidence across the transaction lifecycle.</p>
-                        <p>The result is consistent outcomes that protect both value and reputation.</p>
-                    </div>
-                </div>
-
-                <!-- Advisory -->
-                <div id="about-advisory" class="service-module" data-service="advisory">
-                    <h3 class="service-title">Advisory</h3>
-                    <div class="service-description">
-                        <p>Our advisory services support clients at critical decision points. We provide insights informed by market intelligence, risk assessment, and strategic foresight.</p>
-                        <p>Each engagement is designed to guide direction with confidence and clarity.</p>
-                    </div>
-                </div>
-
-                <!-- Investment Management -->
-                <div id="about-investment" class="service-module" data-service="investment">
-                    <h3 class="service-title">Investment Management</h3>
-                    <div class="service-description">
-                        <p>We assist in identifying and managing real estate investment opportunities aligned with long-term objectives. Through disciplined evaluation and due diligence, we help create resilient investment structures.</p>
-                        <p>Our focus remains on sustainability and strategic fit.</p>
-                    </div>
-                </div>
-
-                <!-- Digital Marketing -->
-                <div id="about-digital" class="service-module" data-service="digital">
-                    <h3 class="service-title">Digital Marketing</h3>
-                    <div class="service-description">
-                        <p>We design digital strategies that enhance visibility while reinforcing credibility. Our approach prioritizes relevance, demand quality, and brand positioning over volume.</p>
-                        <p>Digital becomes a strategic asset, not a tactical expense.</p>
-                    </div>
-                </div>
-
-                <!-- Sales & Marketing -->
-                <div id="about-sales" class="service-module" data-service="sales">
-                    <h3 class="service-title">Sales & Marketing</h3>
-                    <div class="service-description">
-                        <p>We structure sales and marketing systems that translate strategy into execution. By aligning market intelligence with operational delivery, we drive consistent absorption and momentum.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Founder Section -->
-    <section id="founder" class="founder-section">
-        <!-- Scrollable Content Layers -->
-        <div class="founder-content-wrapper">
-            <!-- Founder Name -->
-            <div class="founder-slide founder-name-slide" data-slide="name">
-                <div class="founder-content">
-                    <h2 class="founder-name-display">KARAMALA PRADEEP</h2>
-                    <p class="founder-role">Founder. Principal Consultant.</p>
-                    <p class="founder-experience-text">20+ years shaping sales, strategy, and execution.</p>
-                </div>
-            </div>
-
-            <!-- Expertise Items -->
-            <div class="founder-slide founder-expertise-item" data-slide="expertise-1">
-                <div class="founder-content">
-                    <h3 class="expertise-title">Sales & Marketing</h3>
-                    <p class="expertise-description">Building and executing comprehensive sales strategies that drive revenue growth and market presence through targeted campaigns and strategic positioning.</p>
-                </div>
-            </div>
-
-            <div class="founder-slide founder-expertise-item" data-slide="expertise-2">
-                <div class="founder-content">
-                    <h3 class="expertise-title">Sales Operations</h3>
-                    <p class="expertise-description">Optimizing sales processes, systems, and workflows to ensure efficiency, accountability, and consistent performance across sales teams.</p>
-                </div>
-            </div>
-
-            <div class="founder-slide founder-expertise-item" data-slide="expertise-3">
-                <div class="founder-content">
-                    <h3 class="expertise-title">Business Set-Up</h3>
-                    <p class="expertise-description">Establishing robust business foundations, from organizational structure to operational frameworks, ensuring scalable and sustainable growth.</p>
-                </div>
-            </div>
-
-            <div class="founder-slide founder-expertise-item" data-slide="expertise-4">
-                <div class="founder-content">
-                    <h3 class="expertise-title">Digital Marketing, Sales Strategy & Execution</h3>
-                    <p class="expertise-description">Integrating digital channels with strategic sales approaches to maximize reach, engagement, and conversion through data-driven execution.</p>
-                </div>
-            </div>
-
-            <div class="founder-slide founder-expertise-item" data-slide="expertise-5">
-                <div class="founder-content">
-                    <h3 class="expertise-title">Team Building</h3>
-                    <p class="expertise-description">Cultivating high-performing teams through strategic recruitment, development, and leadership that drives organizational excellence.</p>
-                </div>
-            </div>
-
-            <div class="founder-slide founder-expertise-item" data-slide="expertise-6">
-                <div class="founder-content">
-                    <h3 class="expertise-title">Learning & Development</h3>
-                    <p class="expertise-description">Designing and implementing training programs that enhance capabilities, foster continuous improvement, and build organizational knowledge.</p>
-                </div>
-            </div>
-
-            <!-- Narrative Lock -->
-            <div class="founder-slide founder-narrative" data-slide="narrative">
-                <div class="founder-content">
-                    <p class="narrative-text">An industry expert with over two decades of experience, Karamala Pradeep has built, scaled, and led high-performing sales organizations and business ecosystems within real estate.</p>
-                </div>
-            </div>
-
-            <!-- Impact Moment -->
-            <div class="founder-slide founder-impact" data-slide="impact">
-                <div class="founder-content">
-                    <p class="impact-number" data-count="700">0</p>
-                    <p class="impact-label">Cr in Sales Delivered</p>
-                    <p class="impact-subtext">at GO-DIGITAL since inception</p>
-                </div>
-            </div>
-
-            <!-- Values Close -->
-            <div class="founder-slide founder-values" data-slide="values">
-                <div class="founder-content">
-                    <p class="values-text">Trust · Transparency · Integrity · Mutual Respect · Performance</p>
+                <!-- Right Side - Video -->
+                <div class="driven-video-wrapper animate-on-scroll">
+                    <video class="driven-video" autoplay muted loop playsinline>
+                        <source src="driven/real-estate_1440x810.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
@@ -409,6 +249,286 @@
         </div>
     </section>
 
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <!-- Fixed Left Rail -->
+            <div class="about-rail">
+                <div class="rail-content">
+                    <h2 class="rail-title">ABOUT</h2>
+                    <div class="rail-divider"></div>
+                    <nav class="rail-index">
+                        <a href="#about-strategic" class="rail-item active" data-service="strategic">
+                            <span class="rail-number">01</span>
+                            <span class="rail-label">Strategic Consulting</span>
+                        </a>
+                        <a href="#about-residential" class="rail-item" data-service="residential">
+                            <span class="rail-number">02</span>
+                            <span class="rail-label">Residential Broking</span>
+                        </a>
+                        <a href="#about-advisory" class="rail-item" data-service="advisory">
+                            <span class="rail-number">03</span>
+                            <span class="rail-label">Advisory</span>
+                        </a>
+                        <a href="#about-investment" class="rail-item" data-service="investment">
+                            <span class="rail-number">04</span>
+                            <span class="rail-label">Investment Management</span>
+                        </a>
+                        <a href="#about-digital" class="rail-item" data-service="digital">
+                            <span class="rail-number">05</span>
+                            <span class="rail-label">Digital Marketing</span>
+                        </a>
+                        <a href="#about-sales" class="rail-item" data-service="sales">
+                            <span class="rail-number">06</span>
+                            <span class="rail-label">Sales & Marketing</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Scrollable Right Content -->
+            <div class="about-content-area">
+                <!-- Strategic Consulting -->
+                <div id="about-strategic" class="service-module" data-service="strategic">
+                    <h3 class="service-title">Strategic Consulting</h3>
+                    <p class="service-subline">End-to-End Project Management & Partnerships</p>
+                    <div class="service-description">
+                        <p>We engage at the foundation of real estate ventures. Our strategic consulting spans planning, structuring, execution, and partnership alignment, ensuring projects progress with clarity and intent.</p>
+                        <p>By integrating stakeholders and managing execution holistically, we bring discipline and coherence to complex developments.</p>
+                    </div>
+                </div>
+
+                <!-- Residential Broking -->
+                <div id="about-residential" class="service-module" data-service="residential">
+                    <h3 class="service-title">Residential Broking</h3>
+                    <div class="service-description">
+                        <p>We manage residential transactions with emphasis on transparency and precision. Our role is to align market demand with accurately positioned inventory, ensuring confidence across the transaction lifecycle.</p>
+                        <p>The result is consistent outcomes that protect both value and reputation.</p>
+                    </div>
+                </div>
+
+                <!-- Advisory -->
+                <div id="about-advisory" class="service-module" data-service="advisory">
+                    <h3 class="service-title">Advisory</h3>
+                    <div class="service-description">
+                        <p>Our advisory services support clients at critical decision points. We provide insights informed by market intelligence, risk assessment, and strategic foresight.</p>
+                        <p>Each engagement is designed to guide direction with confidence and clarity.</p>
+                    </div>
+                </div>
+
+                <!-- Investment Management -->
+                <div id="about-investment" class="service-module" data-service="investment">
+                    <h3 class="service-title">Investment Management</h3>
+                    <div class="service-description">
+                        <p>We assist in identifying and managing real estate investment opportunities aligned with long-term objectives. Through disciplined evaluation and due diligence, we help create resilient investment structures.</p>
+                        <p>Our focus remains on sustainability and strategic fit.</p>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div id="about-digital" class="service-module" data-service="digital">
+                    <h3 class="service-title">Digital Marketing</h3>
+                    <div class="service-description">
+                        <p>We design digital strategies that enhance visibility while reinforcing credibility. Our approach prioritizes relevance, demand quality, and brand positioning over volume.</p>
+                        <p>Digital becomes a strategic asset, not a tactical expense.</p>
+                    </div>
+                </div>
+
+                <!-- Sales & Marketing -->
+                <div id="about-sales" class="service-module" data-service="sales">
+                    <h3 class="service-title">Sales & Marketing</h3>
+                    <div class="service-description">
+                        <p>We structure sales and marketing systems that translate strategy into execution. By aligning market intelligence with operational delivery, we drive consistent absorption and momentum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <section id="approach" class="approach-section">
+        <div class="approach-container">
+            <!-- Header -->
+            <div class="approach-header animate-on-scroll">
+                <p class="approach-label">Tailored & Tenacious</p>
+                <h2 class="approach-headline">Our Approach</h2>
+            </div>
+
+            <!-- Main Content Split -->
+            <div class="approach-content-wrapper">
+                <!-- Left Side - Text Content -->
+                <div class="approach-text-content">
+                    <h3 class="approach-main-title">Client Is The King</h3>
+                    <p class="approach-intro">Over the years we have come to conclude, each requirement is unique and demands dedicated individual attention for tailored propositions.</p>
+                    
+                    <!-- Two Column Features -->
+                    <div class="approach-features">
+                        <div class="approach-feature-item animate-on-scroll">
+                            <div class="approach-feature-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 15L35 25L45 27L37 35L38 45L30 40L22 45L23 35L15 27L25 25L30 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M20 20L20 15L25 10L35 10L40 15L40 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h4 class="approach-feature-title">Customer Satisfaction</h4>
+                            <p class="approach-feature-description">Nothing beats client happiness and we leave no stone unturned for the same.</p>
+                        </div>
+
+                        <div class="approach-feature-item animate-on-scroll">
+                            <div class="approach-feature-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="10" y="15" width="25" height="25" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="25" y="20" width="25" height="25" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="10" y1="15" x2="25" y2="20" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="35" y1="15" x2="50" y2="20" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="10" y1="40" x2="25" y2="45" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="35" y1="40" x2="50" y2="45" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h4 class="approach-feature-title">Total Transparency</h4>
+                            <p class="approach-feature-description">We communicate openly and honestly with you during the search process, sharing all the information you need to make an informed decision.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Image -->
+                <div class="approach-image-wrapper animate-on-scroll">
+                    <img src="approach/business-meeting-office.jpg" alt="Business Consultation" class="approach-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach Section - Part 2 -->
+    <section id="approach-2" class="approach-section-2">
+        <div class="approach-container-2">
+            <div class="approach-content-wrapper-2">
+                <!-- Left Side - Image -->
+                <div class="approach-image-wrapper-2 animate-on-scroll">
+                    <img src="approach/21604.jpg" alt="Luxury Property" class="approach-image-2">
+                </div>
+
+                <!-- Right Side - Text Content -->
+                <div class="approach-text-content-2">
+                    <h3 class="approach-main-title-2">Buildings Become Brands</h3>
+                    <p class="approach-intro-2">Each project has its USP. The quality of spaces, design and layout, construction quality, and lifestyle amenities offered are critical in a trustworthy, futuristic community.</p>
+                    
+                    <!-- Two Column Features -->
+                    <div class="approach-features-2">
+                        <div class="approach-feature-item-2 animate-on-scroll">
+                            <div class="approach-feature-icon-2">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="20" cy="20" r="8" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="40" cy="20" r="8" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="30" cy="40" r="8" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="20" y1="20" x2="30" y2="40" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="40" y1="20" x2="30" y2="40" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h4 class="approach-feature-title-2">Developer Associations</h4>
+                            <p class="approach-feature-description-2">We have established relationships with leading developers at the Promoter & Top Management level.</p>
+                        </div>
+
+                        <div class="approach-feature-item-2 animate-on-scroll">
+                            <div class="approach-feature-icon-2">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="15" y="10" width="30" height="40" stroke="currentColor" stroke-width="2" rx="2"/>
+                                    <line x1="20" y1="20" x2="40" y2="20" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="20" y1="30" x2="40" y2="30" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="30" cy="42" r="3" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M25 42L30 47L35 42" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h4 class="approach-feature-title-2">Project Mandates</h4>
+                            <p class="approach-feature-description-2">Our expertise and experience in Mumbai real estate has helped us gain developer trust and preference.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Founder Section -->
+    <section id="founder" class="founder-section">
+        <!-- Scrollable Content Layers -->
+        <div class="founder-content-wrapper">
+            <!-- Founder Name -->
+            <div class="founder-slide founder-name-slide" data-slide="name">
+                <div class="founder-content">
+                    <h2 class="founder-name-display">KARAMALA PRADEEP</h2>
+                    <p class="founder-role">Founder. Principal Consultant.</p>
+                    <p class="founder-experience-text">20+ years shaping sales, strategy, and execution.</p>
+                </div>
+            </div>
+
+            <!-- Expertise Items -->
+            <div class="founder-slide founder-expertise-item" data-slide="expertise-1">
+                <div class="founder-content">
+                    <h3 class="expertise-title">Sales & Marketing</h3>
+                    <p class="expertise-description">Building and executing comprehensive sales strategies that drive revenue growth and market presence through targeted campaigns and strategic positioning.</p>
+                </div>
+            </div>
+
+            <div class="founder-slide founder-expertise-item" data-slide="expertise-2">
+                <div class="founder-content">
+                    <h3 class="expertise-title">Sales Operations</h3>
+                    <p class="expertise-description">Optimizing sales processes, systems, and workflows to ensure efficiency, accountability, and consistent performance across sales teams.</p>
+                </div>
+            </div>
+
+            <div class="founder-slide founder-expertise-item" data-slide="expertise-3">
+                <div class="founder-content">
+                    <h3 class="expertise-title">Business Set-Up</h3>
+                    <p class="expertise-description">Establishing robust business foundations, from organizational structure to operational frameworks, ensuring scalable and sustainable growth.</p>
+                </div>
+            </div>
+
+            <div class="founder-slide founder-expertise-item" data-slide="expertise-4">
+                <div class="founder-content">
+                    <h3 class="expertise-title">Digital Marketing, Sales Strategy & Execution</h3>
+                    <p class="expertise-description">Integrating digital channels with strategic sales approaches to maximize reach, engagement, and conversion through data-driven execution.</p>
+                </div>
+            </div>
+
+            <div class="founder-slide founder-expertise-item" data-slide="expertise-5">
+                <div class="founder-content">
+                    <h3 class="expertise-title">Team Building</h3>
+                    <p class="expertise-description">Cultivating high-performing teams through strategic recruitment, development, and leadership that drives organizational excellence.</p>
+                </div>
+            </div>
+
+            <div class="founder-slide founder-expertise-item" data-slide="expertise-6">
+                <div class="founder-content">
+                    <h3 class="expertise-title">Learning & Development</h3>
+                    <p class="expertise-description">Designing and implementing training programs that enhance capabilities, foster continuous improvement, and build organizational knowledge.</p>
+                </div>
+            </div>
+
+            <!-- Narrative Lock -->
+            <div class="founder-slide founder-narrative" data-slide="narrative">
+                <div class="founder-content">
+                    <p class="narrative-text">An industry expert with over two decades of experience, Karamala Pradeep has built, scaled, and led high-performing sales organizations and business ecosystems within real estate.</p>
+                </div>
+            </div>
+
+            <!-- Impact Moment -->
+            <div class="founder-slide founder-impact" data-slide="impact">
+                <div class="founder-content">
+                    <p class="impact-number" data-count="700">0</p>
+                    <p class="impact-label">Cr in Sales Delivered</p>
+                    <p class="impact-subtext">at GO-DIGITAL since inception</p>
+                </div>
+            </div>
+
+            <!-- Values Close -->
+            <div class="founder-slide founder-values" data-slide="values">
+                <div class="founder-content">
+                    <p class="values-text">Trust · Transparency · Integrity · Mutual Respect · Performance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Our Strategy Section -->
     <section id="strategy" class="strategy-section">
         <div class="strategy-container">
@@ -418,65 +538,77 @@
                 <h2 class="strategy-headline">How We Approach Growth</h2>
             </div>
 
-            <!-- Timeline-Style Layout -->
-            <div class="strategy-timeline">
-                <div class="strategy-item-wrapper animate-on-scroll" data-strategy="1">
-                    <div class="strategy-item">
-                        <div class="strategy-number-large">01</div>
-                        <div class="strategy-content-box">
-                            <h3 class="strategy-title">Market Research</h3>
-                            <p class="strategy-description">Understanding the landscape, market trends, competitor positioning, and evolving customer needs before making any strategic move.</p>
-                        </div>
+            <!-- Grid Layout with Images -->
+            <div class="strategy-grid-layout">
+                <!-- Strategy Item 1 -->
+                <div class="strategy-grid-item animate-on-scroll" data-strategy="1">
+                    <div class="strategy-grid-image">
+                        <img src="strategy/—Pngtree—analysis data financial market research_4355735.png" alt="Market Research" class="strategy-grid-img">
+                    </div>
+                    <div class="strategy-grid-content">
+                        <span class="strategy-grid-number">01</span>
+                        <h3 class="strategy-grid-title">Market Research</h3>
+                        <p class="strategy-grid-description">Understanding the landscape, market trends, competitor positioning, and evolving customer needs before making any strategic move.</p>
                     </div>
                 </div>
 
-                <div class="strategy-item-wrapper animate-on-scroll" data-strategy="2">
-                    <div class="strategy-item strategy-item-right">
-                        <div class="strategy-content-box">
-                            <h3 class="strategy-title">Target Audience</h3>
-                            <p class="strategy-description">Defining exactly who we are speaking to by building a clear and focused customer profile aligned with the offering.</p>
-                        </div>
-                        <div class="strategy-number-large">02</div>
+                <!-- Strategy Item 2 -->
+                <div class="strategy-grid-item animate-on-scroll" data-strategy="2">
+                    <div class="strategy-grid-image">
+                        <img src="strategy/—Pngtree—target audience icon on gray_5056084.png" alt="Target Audience" class="strategy-grid-img">
+                    </div>
+                    <div class="strategy-grid-content">
+                        <span class="strategy-grid-number">02</span>
+                        <h3 class="strategy-grid-title">Target Audience</h3>
+                        <p class="strategy-grid-description">Defining exactly who we are speaking to by building a clear and focused customer profile aligned with the offering.</p>
                     </div>
                 </div>
 
-                <div class="strategy-item-wrapper animate-on-scroll" data-strategy="3">
-                    <div class="strategy-item">
-                        <div class="strategy-number-large">03</div>
-                        <div class="strategy-content-box">
-                            <h3 class="strategy-title">Value Proposition</h3>
-                            <p class="strategy-description">Clarifying why customers should choose one brand over alternatives by identifying what makes the offering distinct and relevant.</p>
-                        </div>
+                <!-- Strategy Item 3 -->
+                <div class="strategy-grid-item animate-on-scroll" data-strategy="3">
+                    <div class="strategy-grid-image">
+                        <img src="strategy/24122457_bwink_sci_01_single_10.svg" alt="Value Proposition" class="strategy-grid-img">
+                    </div>
+                    <div class="strategy-grid-content">
+                        <span class="strategy-grid-number">03</span>
+                        <h3 class="strategy-grid-title">Value Proposition</h3>
+                        <p class="strategy-grid-description">Clarifying why customers should choose one brand over alternatives by identifying what makes the offering distinct and relevant.</p>
                     </div>
                 </div>
 
-                <div class="strategy-item-wrapper animate-on-scroll" data-strategy="4">
-                    <div class="strategy-item strategy-item-right">
-                        <div class="strategy-content-box">
-                            <h3 class="strategy-title">Marketing Channels</h3>
-                            <p class="strategy-description">Selecting the right platforms and mediums — from digital to on-ground — to ensure effective reach and engagement.</p>
-                        </div>
-                        <div class="strategy-number-large">04</div>
+                <!-- Strategy Item 4 -->
+                <div class="strategy-grid-item animate-on-scroll" data-strategy="4">
+                    <div class="strategy-grid-image">
+                        <img src="strategy/337734335_7a6484a7-fe69-4199-b3be-f8ebd8a7cd98.jpg" alt="Marketing Channels" class="strategy-grid-img">
+                    </div>
+                    <div class="strategy-grid-content">
+                        <span class="strategy-grid-number">04</span>
+                        <h3 class="strategy-grid-title">Marketing Channels</h3>
+                        <p class="strategy-grid-description">Selecting the right platforms and mediums — from digital to on-ground — to ensure effective reach and engagement.</p>
                     </div>
                 </div>
 
-                <div class="strategy-item-wrapper animate-on-scroll" data-strategy="5">
-                    <div class="strategy-item">
-                        <div class="strategy-number-large">05</div>
-                        <div class="strategy-content-box">
-                            <h3 class="strategy-title">Content Strategy</h3>
-                            <p class="strategy-description">Designing messaging, visuals, and stories that attract attention, build engagement, and encourage conversion.</p>
-                        </div>
+                <!-- Strategy Item 5 -->
+                <div class="strategy-grid-item animate-on-scroll" data-strategy="5">
+                    <div class="strategy-grid-image">
+                        <img src="strategy/417373527_a5497d67-6278-4965-8414-c083d38fc79f.jpg" alt="Content Strategy" class="strategy-grid-img">
+                    </div>
+                    <div class="strategy-grid-content">
+                        <span class="strategy-grid-number">05</span>
+                        <h3 class="strategy-grid-title">Content Strategy</h3>
+                        <p class="strategy-grid-description">Designing messaging, visuals, and stories that attract attention, build engagement, and encourage conversion.</p>
                     </div>
                 </div>
 
-                <div class="strategy-item-wrapper animate-on-scroll" data-strategy="6">
-                    <div class="strategy-item strategy-item-right">
-                        <div class="strategy-content-box">
-                            <h3 class="strategy-title">Marketing Campaigns</h3>
-                            <p class="strategy-description">Planning focused initiatives aligned with defined objectives, whether awareness, lead generation, or sales outcomes.</p>
-                        </div>
-                        <div class="strategy-number-large">06</div>
+                <!-- Strategy Item 6 -->
+                <div class="strategy-grid-item animate-on-scroll" data-strategy="6">
+                    <div class="strategy-grid-image">
+                        <img src="strategy/417992780_26d1b55a-9bd0-4c22-a6ed-a63ae0410f84.jpg" alt="Marketing Campaigns" class="strategy-grid-img">
+                    </div>
+                    <div class="strategy-grid-content">
+                        <span class="strategy-grid-number">06</span>
+                        <h3 class="strategy-grid-title">Marketing Campaigns</h3>
+                        <p class="strategy-grid-description">Planning focused initiatives aligned with defined objectives, whether awareness, lead generation, or sales outcomes.</p>
                     </div>
                 </div>
             </div>
@@ -494,87 +626,96 @@
                 <p class="scope-subtitle">GO-DIGITAL will come onboard as Strategic Partner for Sales & Marketing.</p>
             </div>
 
-            <!-- Scope Items Container -->
-            <div class="scope-items-container animate-on-scroll">
+            <!-- Scope Items Container - Dynamic Grid Layout -->
+            <div class="scope-grid-wrapper animate-on-scroll">
                 <!-- Item 1 -->
-                <div class="scope-item-box">
-                    <div class="scope-item-number">01</div>
-                    <div class="scope-item-content">
-                        <h3 class="scope-item-title">Campaigns (Digital & Local)</h3>
-                        <p class="scope-item-description">We design and execute comprehensive marketing campaigns across digital platforms and local channels. Our approach combines data-driven digital strategies with targeted local outreach to maximize visibility and engagement within your market.</p>
+                <div class="scope-card scope-card-featured">
+                    <div class="scope-card-number">01</div>
+                    <div class="scope-card-content">
+                        <h3 class="scope-card-title">Campaigns (Digital & Local)</h3>
+                        <p class="scope-card-description">We design and execute comprehensive marketing campaigns across digital platforms and local channels. Our approach combines data-driven digital strategies with targeted local outreach to maximize visibility and engagement within your market.</p>
                     </div>
+                    <div class="scope-card-accent"></div>
                 </div>
 
                 <!-- Item 2 -->
-                <div class="scope-item-box">
-                    <div class="scope-item-number">02</div>
-                    <div class="scope-item-content">
-                        <h3 class="scope-item-title">Lead Generation & Connects</h3>
-                        <p class="scope-item-description">Through strategic prospecting and relationship building, we generate qualified leads and establish meaningful connections. Our process ensures every lead is validated, engaged, and nurtured through the sales funnel.</p>
+                <div class="scope-card">
+                    <div class="scope-card-number">02</div>
+                    <div class="scope-card-content">
+                        <h3 class="scope-card-title">Lead Generation & Connects</h3>
+                        <p class="scope-card-description">Through strategic prospecting and relationship building, we generate qualified leads and establish meaningful connections. Our process ensures every lead is validated, engaged, and nurtured through the sales funnel.</p>
                     </div>
+                    <div class="scope-card-accent"></div>
                 </div>
 
                 <!-- Item 3 -->
-                <div class="scope-item-box">
-                    <div class="scope-item-number">03</div>
-                    <div class="scope-item-content">
-                        <h3 class="scope-item-title">Site Visit Fixing</h3>
-                        <p class="scope-item-description">We coordinate and schedule site visits with precision, ensuring optimal timing and preparation. Our team manages logistics, confirms appointments, and prepares all necessary materials to create impactful first impressions.</p>
+                <div class="scope-card scope-card-dark">
+                    <div class="scope-card-number">03</div>
+                    <div class="scope-card-content">
+                        <h3 class="scope-card-title">Site Visit Fixing</h3>
+                        <p class="scope-card-description">We coordinate and schedule site visits with precision, ensuring optimal timing and preparation. Our team manages logistics, confirms appointments, and prepares all necessary materials to create impactful first impressions.</p>
                     </div>
+                    <div class="scope-card-accent"></div>
                 </div>
 
                 <!-- Item 4 -->
-                <div class="scope-item-box">
-                    <div class="scope-item-number">04</div>
-                    <div class="scope-item-content">
-                        <h3 class="scope-item-title">Site Visit Execution</h3>
-                        <p class="scope-item-description">On-site, we deliver professional presentations and guided tours that highlight key features and value propositions. Our execution focuses on creating memorable experiences that convert interest into commitment.</p>
+                <div class="scope-card">
+                    <div class="scope-card-number">04</div>
+                    <div class="scope-card-content">
+                        <h3 class="scope-card-title">Site Visit Execution</h3>
+                        <p class="scope-card-description">On-site, we deliver professional presentations and guided tours that highlight key features and value propositions. Our execution focuses on creating memorable experiences that convert interest into commitment.</p>
                     </div>
+                    <div class="scope-card-accent"></div>
                 </div>
 
                 <!-- Item 5 -->
-                <div class="scope-item-box">
-                    <div class="scope-item-number">05</div>
-                    <div class="scope-item-content">
-                        <h3 class="scope-item-title">Negotiations and Closures</h3>
-                        <p class="scope-item-description">We facilitate negotiations with expertise and finesse, working to align terms that benefit all parties. Our approach ensures transparent communication and smooth closures that protect both value and relationships.</p>
+                <div class="scope-card scope-card-dark">
+                    <div class="scope-card-number">05</div>
+                    <div class="scope-card-content">
+                        <h3 class="scope-card-title">Negotiations and Closures</h3>
+                        <p class="scope-card-description">We facilitate negotiations with expertise and finesse, working to align terms that benefit all parties. Our approach ensures transparent communication and smooth closures that protect both value and relationships.</p>
                     </div>
+                    <div class="scope-card-accent"></div>
                 </div>
 
                 <!-- Item 6 -->
-                <div class="scope-item-box">
-                    <div class="scope-item-number">06</div>
-                    <div class="scope-item-content">
-                        <h3 class="scope-item-title">Banking & Collections</h3>
-                        <p class="scope-item-description">We manage the financial aspects of transactions with precision and compliance. Our team coordinates with banking partners, tracks payments, and ensures timely collections while maintaining clear documentation.</p>
+                <div class="scope-card">
+                    <div class="scope-card-number">06</div>
+                    <div class="scope-card-content">
+                        <h3 class="scope-card-title">Banking & Collections</h3>
+                        <p class="scope-card-description">We manage the financial aspects of transactions with precision and compliance. Our team coordinates with banking partners, tracks payments, and ensures timely collections while maintaining clear documentation.</p>
                     </div>
+                    <div class="scope-card-accent"></div>
                 </div>
 
                 <!-- Item 7 -->
-                <div class="scope-item-box">
-                    <div class="scope-item-number">07</div>
-                    <div class="scope-item-content">
-                        <h3 class="scope-item-title">Sale Agreements</h3>
-                        <p class="scope-item-description">We prepare and coordinate sale agreements with attention to legal accuracy and clarity. Our process ensures all terms are properly documented, reviewed, and executed in accordance with regulatory requirements.</p>
+                <div class="scope-card scope-card-dark">
+                    <div class="scope-card-number">07</div>
+                    <div class="scope-card-content">
+                        <h3 class="scope-card-title">Sale Agreements</h3>
+                        <p class="scope-card-description">We prepare and coordinate sale agreements with attention to legal accuracy and clarity. Our process ensures all terms are properly documented, reviewed, and executed in accordance with regulatory requirements.</p>
                     </div>
+                    <div class="scope-card-accent"></div>
                 </div>
 
                 <!-- Item 8 -->
-                <div class="scope-item-box">
-                    <div class="scope-item-number">08</div>
-                    <div class="scope-item-content">
-                        <h3 class="scope-item-title">Legal Coordinations</h3>
-                        <p class="scope-item-description">We facilitate seamless coordination between all legal stakeholders, ensuring compliance and timely processing. Our team manages documentation, coordinates with legal counsel, and maintains clear communication throughout the process.</p>
+                <div class="scope-card">
+                    <div class="scope-card-number">08</div>
+                    <div class="scope-card-content">
+                        <h3 class="scope-card-title">Legal Coordinations</h3>
+                        <p class="scope-card-description">We facilitate seamless coordination between all legal stakeholders, ensuring compliance and timely processing. Our team manages documentation, coordinates with legal counsel, and maintains clear communication throughout the process.</p>
                     </div>
+                    <div class="scope-card-accent"></div>
                 </div>
 
                 <!-- Item 9 -->
-                <div class="scope-item-box">
-                    <div class="scope-item-number">09</div>
-                    <div class="scope-item-content">
-                        <h3 class="scope-item-title">Registrations & Sale Deed</h3>
-                        <p class="scope-item-description">We oversee the final stages of property transfer, coordinating registrations and sale deed execution. Our comprehensive approach ensures all legal formalities are completed accurately and efficiently, finalizing the transaction with confidence.</p>
+                <div class="scope-card scope-card-dark scope-card-span">
+                    <div class="scope-card-number">09</div>
+                    <div class="scope-card-content">
+                        <h3 class="scope-card-title">Registrations & Sale Deed</h3>
+                        <p class="scope-card-description">We oversee the final stages of property transfer, coordinating registrations and sale deed execution. Our comprehensive approach ensures all legal formalities are completed accurately and efficiently, finalizing the transaction with confidence.</p>
                     </div>
+                    <div class="scope-card-accent"></div>
                 </div>
             </div>
         </div>

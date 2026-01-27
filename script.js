@@ -14,22 +14,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Mobile menu toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+const navbarToggle = document.querySelector('.navbar-toggle');
+const navbarMenu = document.querySelector('.navbar-menu');
 
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
+if (navbarToggle) {
+    navbarToggle.addEventListener('click', () => {
+        navbarMenu.classList.toggle('active');
+        navbarToggle.classList.toggle('active');
     });
 }
 
 // Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-menu a').forEach(link => {
+document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
+        navbarMenu.classList.remove('active');
+        navbarToggle.classList.remove('active');
     });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (navbarMenu && navbarToggle && 
+        !navbarMenu.contains(e.target) && 
+        !navbarToggle.contains(e.target) &&
+        navbarMenu.classList.contains('active')) {
+        navbarMenu.classList.remove('active');
+        navbarToggle.classList.remove('active');
+    }
 });
 
 // Premium scroll animations with subtle timing
@@ -288,12 +299,12 @@ if (projectCards.length > 0) {
     });
 }
 
-// Strategy Section - Timeline Layout Animations
-const strategyItemWrappers = document.querySelectorAll('.strategy-item-wrapper');
-if (strategyItemWrappers.length > 0) {
+// Strategy Section - Grid Layout Animations
+const strategyGridItems = document.querySelectorAll('.strategy-grid-item');
+if (strategyGridItems.length > 0) {
     const strategyObserverOptions = {
-        threshold: 0.2,
-        rootMargin: '0px 0px -100px 0px'
+        threshold: 0.15,
+        rootMargin: '0px 0px -80px 0px'
     };
     
     const strategyObserver = new IntersectionObserver((entries) => {
@@ -306,17 +317,17 @@ if (strategyItemWrappers.length > 0) {
         });
     }, strategyObserverOptions);
     
-    strategyItemWrappers.forEach(wrapper => {
-        strategyObserver.observe(wrapper);
+    strategyGridItems.forEach(item => {
+        strategyObserver.observe(item);
     });
 }
 
 // Scope Of Work Section - Container Layout Animations
-const scopeItemsContainer = document.querySelector('.scope-items-container');
-if (scopeItemsContainer) {
+const scopeGridWrapper = document.querySelector('.scope-grid-wrapper');
+if (scopeGridWrapper) {
     const scopeObserverOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -150px 0px'
+        rootMargin: '0px 0px -100px 0px'
     };
     
     const scopeObserver = new IntersectionObserver((entries) => {
@@ -327,7 +338,7 @@ if (scopeItemsContainer) {
         });
     }, scopeObserverOptions);
     
-    scopeObserver.observe(scopeItemsContainer);
+    scopeObserver.observe(scopeGridWrapper);
 }
 
 // Contact Section - Anchor + Action Layout Animations
