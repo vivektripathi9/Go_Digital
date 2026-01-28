@@ -1,3 +1,41 @@
+// Hero Video Loading Optimization
+const heroVideo = document.getElementById('heroVideo');
+const heroLoading = document.querySelector('.hero-loading');
+
+if (heroVideo) {
+    // Show video when it can play
+    heroVideo.addEventListener('canplaythrough', () => {
+        heroVideo.classList.add('loaded');
+        if (heroLoading) {
+            heroLoading.classList.add('hidden');
+        }
+    }, { once: true });
+    
+    // Fallback: Show video after metadata loads
+    heroVideo.addEventListener('loadedmetadata', () => {
+        setTimeout(() => {
+            heroVideo.classList.add('loaded');
+            if (heroLoading) {
+                heroLoading.classList.add('hidden');
+            }
+        }, 300);
+    }, { once: true });
+    
+    // Ensure video plays
+    heroVideo.addEventListener('loadstart', () => {
+        heroVideo.play().catch(() => {
+            // Auto-play was prevented, but video will show when loaded
+        });
+    });
+    
+    // Force play on user interaction (fallback)
+    document.addEventListener('click', () => {
+        if (heroVideo.paused) {
+            heroVideo.play().catch(() => {});
+        }
+    }, { once: true });
+}
+
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -70,10 +108,19 @@ if (aboutSection) {
     const serviceModules = document.querySelectorAll('.service-module');
     const railItems = document.querySelectorAll('.rail-item');
     let currentService = null;
+    let isManualScroll = false; // Flag to prevent intersection observer from overriding manual clicks
     
     // Function to activate a service
-    function activateService(serviceName) {
+    function activateService(serviceName, isManual = false) {
         if (currentService === serviceName) return;
+        
+        if (isManual) {
+            isManualScroll = true;
+            // Reset flag after scroll completes
+            setTimeout(() => {
+                isManualScroll = false;
+            }, 1000);
+        }
         
         // Update rail items
         railItems.forEach(item => {
@@ -104,10 +151,13 @@ if (aboutSection) {
     };
     
     const moduleObserver = new IntersectionObserver((entries) => {
+        // Don't update if user manually clicked
+        if (isManualScroll) return;
+        
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const serviceName = entry.target.dataset.service;
-                if (serviceName) {
+                if (serviceName && serviceName !== currentService) {
                     activateService(serviceName);
                 }
             }
@@ -127,103 +177,79 @@ if (aboutSection) {
             const targetModule = document.querySelector(`#about-${serviceName}`);
             
             if (targetModule) {
-                const offsetTop = targetModule.offsetTop - 80;
+                // Calculate scroll position using getBoundingClientRect for accuracy
+                const targetRect = targetModule.getBoundingClientRect();
+                const navbarHeight = 80; // Adjust based on your navbar height
+                const scrollPosition = window.pageYOffset + targetRect.top - navbarHeight;
+                
+                // Activate immediately before scrolling
+                activateService(serviceName, true);
+                
+                // Scroll to target
                 window.scrollTo({
-                    top: offsetTop,
+                    top: scrollPosition,
                     behavior: 'smooth'
                 });
-                activateService(serviceName);
+                
+                // Update URL hash
+                history.pushState(null, null, `#about-${serviceName}`);
             }
         });
     });
     
-    // Initialize first service
-    if (serviceModules.length > 0) {
-        activateService(serviceModules[0].dataset.service);
+    // Handle browser back/forward buttons and initial hash
+    function handleHashNavigation() {
+        const hash = window.location.hash;
+        if (hash && hash.startsWith('#about-')) {
+            const serviceName = hash.replace('#about-', '');
+            const targetModule = document.querySelector(`#about-${serviceName}`);
+            if (targetModule) {
+                const targetRect = targetModule.getBoundingClientRect();
+                const navbarHeight = 80;
+                const scrollPosition = window.pageYOffset + targetRect.top - navbarHeight;
+                
+                activateService(serviceName, true);
+                window.scrollTo({
+                    top: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }
+    
+    window.addEventListener('popstate', handleHashNavigation);
+    
+    // Check for hash on page load
+    if (window.location.hash && window.location.hash.startsWith('#about-')) {
+        handleHashNavigation();
+    } else {
+        // Initialize first service if no hash
+        if (serviceModules.length > 0) {
+            activateService(serviceModules[0].dataset.service);
+        }
     }
 }
 
-// Founder Section - Scroll-Driven Name Architecture
-const founderSection = document.querySelector('.founder-section');
-if (founderSection) {
-    const founderSlides = document.querySelectorAll('.founder-slide');
-    const impactNumber = document.querySelector('.impact-number');
-    let currentSlide = 0;
-    let hasCounted = false;
-    
-    // Function to activate a slide
-    function activateSlide(index) {
-        if (index < 0 || index >= founderSlides.length) return;
-        
-        founderSlides.forEach((slide, i) => {
-            if (i === index) {
-                slide.classList.add('active');
-            } else {
-                slide.classList.remove('active');
-            }
-        });
-        
-        // Handle background color changes
-        const slide = founderSlides[index];
-        if (slide.classList.contains('founder-impact')) {
-            founderSection.classList.add('black-bg');
-        } else {
-            founderSection.classList.remove('black-bg');
-        }
-        
-        // Trigger count-up animation for impact slide
-        if (slide.classList.contains('founder-impact') && !hasCounted && impactNumber) {
-            hasCounted = true;
-            animateCountUp(impactNumber, 0, 700, 2000);
-        }
-        
-        currentSlide = index;
-    }
-    
-    // Count-up animation
-    function animateCountUp(element, start, end, duration) {
-        const range = end - start;
-        const increment = range / (duration / 16);
-        let current = start;
-        
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= end) {
-                element.textContent = end + '+';
-                clearInterval(timer);
-            } else {
-                element.textContent = Math.floor(current) + '+';
-            }
-        }, 16);
-    }
-    
-    // Intersection Observer for scroll detection
+// Founder Section - Split Layout Animations
+const founderImageWrapper = document.querySelector('.founder-image-wrapper');
+const founderTextContent = document.querySelector('.founder-text-content');
+
+if (founderImageWrapper || founderTextContent) {
     const founderObserverOptions = {
-        root: null,
-        rootMargin: '-30% 0px -30% 0px',
-        threshold: 0
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
     };
     
     const founderObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const slideIndex = Array.from(founderSlides).indexOf(entry.target);
-                if (slideIndex !== -1) {
-                    activateSlide(slideIndex);
-                }
+                entry.target.classList.add('animated');
             }
         });
     }, founderObserverOptions);
     
-    // Observe all slides
-    founderSlides.forEach(slide => {
-        founderObserver.observe(slide);
-    });
-    
-    // Initialize first slide
-    if (founderSlides.length > 0) {
-        activateSlide(0);
-    }
+    if (founderImageWrapper) founderObserver.observe(founderImageWrapper);
+    if (founderTextContent) founderObserver.observe(founderTextContent);
 }
 
 // Navbar - always pure black
@@ -299,9 +325,9 @@ if (projectCards.length > 0) {
     });
 }
 
-// Strategy Section - Grid Layout Animations
-const strategyGridItems = document.querySelectorAll('.strategy-grid-item');
-if (strategyGridItems.length > 0) {
+// Strategy Section - Circular Containers Animations
+const strategyCircleItems = document.querySelectorAll('.strategy-circle-item');
+if (strategyCircleItems.length > 0) {
     const strategyObserverOptions = {
         threshold: 0.15,
         rootMargin: '0px 0px -80px 0px'
@@ -317,28 +343,135 @@ if (strategyGridItems.length > 0) {
         });
     }, strategyObserverOptions);
     
-    strategyGridItems.forEach(item => {
+    strategyCircleItems.forEach(item => {
         strategyObserver.observe(item);
     });
 }
 
-// Scope Of Work Section - Container Layout Animations
-const scopeGridWrapper = document.querySelector('.scope-grid-wrapper');
-if (scopeGridWrapper) {
-    const scopeObserverOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+// Scope Of Work Section - Carousel Functionality
+const scopeCarouselInner = document.querySelector('.scope-carousel-inner');
+const scopeCards = document.querySelectorAll('.scope-card');
+const scopePrevBtn = document.querySelector('.scope-carousel-btn-prev');
+const scopeNextBtn = document.querySelector('.scope-carousel-btn-next');
+const scopeHeader = document.querySelector('.scope-header');
+
+let currentScopeIndex = 0;
+const totalCards = scopeCards.length;
+
+// Get card width and gap based on viewport
+function getCardDimensions() {
+    const viewportWidth = window.innerWidth;
+    if (viewportWidth <= 480) {
+        return { width: 280, gap: 16 }; // Small mobile
+    } else if (viewportWidth <= 768) {
+        return { width: 320, gap: 24 }; // Mobile
+    } else if (viewportWidth <= 1024) {
+        return { width: 350, gap: 28 }; // Tablet
+    } else {
+        return { width: 380, gap: 32 }; // Desktop
+    }
+}
+
+// Calculate how many cards can fit in viewport
+function getCardsPerView() {
+    const viewportWidth = window.innerWidth;
+    if (viewportWidth <= 768) return 1;
+    if (viewportWidth <= 1024) return 2;
+    return 3;
+}
+
+// Update carousel position
+function updateScopeCarousel() {
+    const cardsPerView = getCardsPerView();
+    const maxIndex = Math.max(0, totalCards - cardsPerView);
+    currentScopeIndex = Math.min(currentScopeIndex, maxIndex);
+    
+    const { width: cardWidth, gap: cardGap } = getCardDimensions();
+    const translateX = -(currentScopeIndex * (cardWidth + cardGap));
+    if (scopeCarouselInner) {
+        scopeCarouselInner.style.transform = `translateX(${translateX}px)`;
+    }
+    
+    // Update button states
+    if (scopePrevBtn) {
+        scopePrevBtn.disabled = currentScopeIndex === 0;
+    }
+    if (scopeNextBtn) {
+        scopeNextBtn.disabled = currentScopeIndex >= maxIndex;
+    }
+}
+
+// Navigation handlers
+if (scopePrevBtn) {
+    scopePrevBtn.addEventListener('click', () => {
+        if (currentScopeIndex > 0) {
+            currentScopeIndex--;
+            updateScopeCarousel();
+        }
+    });
+}
+
+if (scopeNextBtn) {
+    scopeNextBtn.addEventListener('click', () => {
+        const cardsPerView = getCardsPerView();
+        const maxIndex = Math.max(0, totalCards - cardsPerView);
+        if (currentScopeIndex < maxIndex) {
+            currentScopeIndex++;
+            updateScopeCarousel();
+        }
+    });
+}
+
+// Initialize carousel
+if (scopeCarouselInner && scopeCards.length > 0) {
+    updateScopeCarousel();
+    
+    // Handle window resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            updateScopeCarousel();
+        }, 250);
+    });
+}
+
+// Scope Section - Scroll Animations
+if (scopeHeader) {
+    const scopeHeaderObserverOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
     };
     
-    const scopeObserver = new IntersectionObserver((entries) => {
+    const scopeHeaderObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animated');
             }
         });
-    }, scopeObserverOptions);
+    }, scopeHeaderObserverOptions);
     
-    scopeObserver.observe(scopeGridWrapper);
+    scopeHeaderObserver.observe(scopeHeader);
+}
+
+// Animate scope cards on scroll
+if (scopeCards.length > 0) {
+    const scopeCardObserverOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const scopeCardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+            }
+        });
+    }, scopeCardObserverOptions);
+    
+    scopeCards.forEach(card => {
+        scopeCardObserver.observe(card);
+    });
 }
 
 // Contact Section - Anchor + Action Layout Animations
@@ -449,24 +582,95 @@ if (contactForm) {
         
         // Get form values
         const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            countryCode: document.getElementById('countryCode').value,
             phone: document.getElementById('phone').value,
-            message: document.getElementById('message').value
+            email: document.getElementById('email').value
         };
         
         // Here you would typically send the data to a server
         // For now, we'll just log it and show a success message
-        console.log('Form submitted:', formData);
+        console.log('Contact form submitted:', formData);
         
         // You can add your form submission logic here
         // Example: Send to email service, save to database, etc.
         
         // Show success message (you can customize this)
-        alert('Thank you for your message. We will get back to you soon.');
+        alert('Thank you for contacting us. We will get back to you soon.');
         
         // Reset form
         contactForm.reset();
+    });
+}
+
+// Delivered Section - Scroll Animations with Number Count-Up
+const deliveredImpactBox = document.querySelector('.delivered-impact-box');
+const deliveredValues = document.querySelector('.delivered-values');
+const deliveredNumber = document.querySelector('.delivered-number');
+
+if (deliveredImpactBox || deliveredValues) {
+    const deliveredObserverOptions = {
+        threshold: 0.3,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const deliveredObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                
+                // Trigger count-up animation for number
+                if (entry.target === deliveredImpactBox && deliveredNumber && !deliveredNumber.classList.contains('counted')) {
+                    deliveredNumber.classList.add('counted');
+                    animateDeliveredCountUp(deliveredNumber, 0, 700, 2000);
+                }
+            }
+        });
+    }, deliveredObserverOptions);
+    
+    if (deliveredImpactBox) deliveredObserver.observe(deliveredImpactBox);
+    if (deliveredValues) deliveredObserver.observe(deliveredValues);
+}
+
+// Count-up animation for delivered number
+function animateDeliveredCountUp(element, start, end, duration) {
+    const range = end - start;
+    const increment = range / (duration / 16);
+    let current = start;
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= end) {
+            element.textContent = end + '+';
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current) + '+';
+        }
+    }, 16);
+}
+
+// Contact Section - Scroll Animations
+const contactColumns = document.querySelectorAll('.contact-column');
+
+if (contactColumns.length > 0) {
+    const contactObserverOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const contactObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('animated');
+                }, index * 100);
+            }
+        });
+    }, contactObserverOptions);
+    
+    contactColumns.forEach(column => {
+        contactObserver.observe(column);
     });
 }
 
