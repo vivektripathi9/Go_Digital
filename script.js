@@ -609,15 +609,7 @@ if (deliveredSection) {
                     }
                 }
                 
-                // Animate values one by one with staggered delays
-                if (deliveredValueItems.length > 0) {
-                    deliveredValueItems.forEach((item, index) => {
-                        const delay = parseFloat(item.getAttribute('data-delay')) || (index * 0.2);
-                        setTimeout(() => {
-                            item.classList.add('animated');
-                        }, delay * 1000);
-                    });
-                }
+                // Values are now static - no animation needed
             }
         });
     }, deliveredObserverOptions);

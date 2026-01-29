@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background-color: var(--black);
     color: var(--white);
     line-height: 1.7;
@@ -68,7 +68,7 @@ body {
 }
 
 .logo-text {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 3px;
@@ -228,7 +228,7 @@ body {
 }
 
 .hero-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 5.5rem;
     font-weight: 900;
     letter-spacing: 15px;
@@ -357,7 +357,7 @@ body {
 }
 
 .driven-headline {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 3.5rem;
     font-weight: 700;
     letter-spacing: 3px;
@@ -407,7 +407,7 @@ body {
 }
 
 .section-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 3rem;
     text-align: center;
     margin-bottom: 80px;
@@ -432,7 +432,7 @@ body {
 }
 
 .content-box h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 2rem;
     margin-bottom: 2rem;
     letter-spacing: 4px;
@@ -488,7 +488,7 @@ body {
 }
 
 .rail-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 4px;
@@ -535,7 +535,7 @@ body {
 }
 
 .rail-number {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 0.9rem;
     letter-spacing: 2px;
     min-width: 30px;
@@ -575,7 +575,7 @@ body {
 }
 
 .service-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 4px;
@@ -639,7 +639,7 @@ body {
 }
 
 .founder-section-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 6px;
@@ -697,7 +697,7 @@ body {
 }
 
 .founder-name-display {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 4px;
@@ -790,8 +790,8 @@ body {
 }
 
 .expertise-title {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.4rem;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
     font-weight: 400;
     letter-spacing: 0.5px;
     text-transform: none;
@@ -822,7 +822,7 @@ body {
 }
 
 .projects-main-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 5px;
@@ -841,7 +841,7 @@ body {
 }
 
 .projects-subline {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.2rem;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -925,7 +925,7 @@ body {
 }
 
 .project-caption {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 1px;
@@ -977,7 +977,7 @@ body {
 }
 
 .summary-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 4px;
@@ -1026,7 +1026,7 @@ body {
 }
 
 .approach-headline {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 6px;
@@ -1051,7 +1051,7 @@ body {
 }
 
 .approach-main-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 4px;
@@ -1102,7 +1102,7 @@ body {
 }
 
 .approach-feature-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -1190,7 +1190,7 @@ body {
 }
 
 .approach-main-title-2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 2.2rem;
     font-weight: 700;
     letter-spacing: 3px;
@@ -1241,7 +1241,7 @@ body {
 }
 
 .approach-feature-title-2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 2px;
@@ -1280,7 +1280,7 @@ body {
 }
 
 .strategy-headline {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 6px;
@@ -1352,7 +1352,7 @@ body {
 
 /* Strategy Card Title */
 .strategy-card-title {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 1.2px;
@@ -1416,7 +1416,7 @@ body {
 }
 
 .scope-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 6px;
@@ -1520,7 +1520,7 @@ body {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--black);
@@ -1553,7 +1553,7 @@ body {
 }
 
 .scope-card-title {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 1.2px;
@@ -1636,7 +1636,7 @@ body {
 }
 
 .delivered-number {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 6rem;
     font-weight: 900;
     color: var(--white);
@@ -1651,7 +1651,7 @@ body {
 }
 
 .delivered-label {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 0.7rem;
     font-weight: 400;
     letter-spacing: 3px;
@@ -1663,7 +1663,7 @@ body {
 }
 
 .delivered-subtext {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 0.6rem;
     font-weight: 300;
     letter-spacing: 2px;
@@ -1686,39 +1686,35 @@ body {
 }
 
 .delivered-value-item {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
     letter-spacing: 1px;
     color: var(--white);
-    opacity: 0;
-    transform: translateY(20px) scale(0.9);
-    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    opacity: 1;
     line-height: 1.4;
     text-align: center;
     position: relative;
     padding: 0.5rem 1rem;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    justify-content: center;
 }
 
-.delivered-value-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--white);
-    transition: width 0.6s ease-out 0.3s;
+.delivered-value-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
 }
 
-.delivered-value-item.animated {
+.delivered-value-item:hover .delivered-value-icon {
     opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-.delivered-value-item.animated::before {
-    width: 100%;
 }
 
 /* Contact Section - Anchor + Action Layout */
@@ -1740,7 +1736,7 @@ body {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr 1fr 1.3fr;
+    grid-template-columns: 1fr 1fr 1.3fr;
     gap: 4rem;
     align-items: flex-start;
     position: relative;
@@ -1761,9 +1757,56 @@ body {
 }
 
 .contact-column-brand {
-    gap: 2.5rem;
-    align-items: flex-start;
-    justify-content: flex-start;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Redesigned Contact Info Below Logo */
+.contact-info-redesigned {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    margin-top: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-info-item-redesigned {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-info-label-redesigned {
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--white);
+    opacity: 0.6;
+    margin: 0;
+}
+
+.contact-info-value-redesigned {
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    color: var(--white);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contact-info-value-redesigned:hover {
+    opacity: 0.7;
 }
 
 .contact-logo-container {
@@ -1772,10 +1815,11 @@ body {
     justify-content: center;
     width: 100%;
     padding: 0;
+    text-align: center;
 }
 
 .contact-logo-text {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 4px;
@@ -1798,7 +1842,7 @@ body {
 }
 
 .contact-journey-heading {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 1.3;
@@ -1808,7 +1852,7 @@ body {
 }
 
 .contact-journey-description {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 0.9rem;
     font-weight: 300;
     line-height: 1.7;
@@ -1837,7 +1881,7 @@ body {
 }
 
 .contact-info-label {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 1.5px;
@@ -1848,7 +1892,7 @@ body {
 }
 
 .contact-info-value {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 0.85rem;
     font-weight: 400;
     letter-spacing: 0.2px;
@@ -1865,16 +1909,19 @@ body {
 /* Column 3 - Navigation Links */
 .contact-column-links {
     gap: 0;
+    align-items: center;
+    text-align: center;
 }
 
 .contact-links-nav {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    align-items: center;
 }
 
 .contact-link {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 0.75rem;
     font-weight: 400;
     letter-spacing: 1.5px;
@@ -1893,10 +1940,12 @@ body {
 /* Column 4 - Contact Form */
 .contact-column-form {
     gap: 1.5rem;
+    align-items: center;
+    text-align: center;
 }
 
 .contact-form-title {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: 3px;
@@ -1907,7 +1956,7 @@ body {
 }
 
 .contact-form-description {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 0.8rem;
     font-weight: 300;
     letter-spacing: 0.2px;
@@ -1956,7 +2005,7 @@ body {
     font-size: 0.9rem;
     font-weight: 400;
     letter-spacing: 0.2px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     transition: border-color 0.3s ease;
     border-radius: 0;
 }
@@ -1985,7 +2034,7 @@ body {
     font-size: 0.9rem;
     font-weight: 400;
     letter-spacing: 0.2px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     cursor: pointer;
     appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23fff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
@@ -2022,7 +2071,7 @@ body {
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 0;
@@ -2138,7 +2187,7 @@ body {
 }
 
 .modal-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 5px;
@@ -2190,7 +2239,7 @@ body {
     font-weight: 300;
     letter-spacing: 0.5px;
     color: var(--black);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     transition: border-color 0.3s ease, padding-left 0.3s ease;
 }
 
@@ -2232,7 +2281,7 @@ body {
     letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: 400;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     align-self: flex-start;
@@ -2743,7 +2792,7 @@ body {
     }
     
     .expertise-title {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .expertise-description {
@@ -2789,6 +2838,12 @@ body {
     .delivered-value-item {
         font-size: 1.2rem;
         padding: 0.4rem 0.8rem;
+        gap: 0.6rem;
+    }
+    
+    .delivered-value-icon {
+        width: 20px;
+        height: 20px;
     }
     
     /* Contact Section Responsive */
@@ -2811,6 +2866,18 @@ body {
     
     .contact-column-brand {
         gap: 2rem;
+    }
+    
+    .contact-info-redesigned {
+        gap: 1.1rem;
+    }
+    
+    .contact-info-label-redesigned {
+        font-size: 0.6rem;
+    }
+    
+    .contact-info-value-redesigned {
+        font-size: 0.8rem;
     }
     
     .contact-logo-text {
@@ -3310,7 +3377,7 @@ body {
     }
     
     .expertise-title {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
     }
     
     .expertise-description {
@@ -3361,6 +3428,12 @@ body {
         font-size: 1rem;
         text-align: center;
         padding: 0.4rem 0.8rem;
+        gap: 0.5rem;
+    }
+    
+    .delivered-value-icon {
+        width: 18px;
+        height: 18px;
     }
     
     /* Contact Section Mobile */
@@ -3392,6 +3465,19 @@ body {
     
     .contact-column-brand {
         gap: 1.5rem;
+    }
+    
+    .contact-info-redesigned {
+        gap: 0.9rem;
+        margin-top: 0.5rem;
+    }
+    
+    .contact-info-label-redesigned {
+        font-size: 0.55rem;
+    }
+    
+    .contact-info-value-redesigned {
+        font-size: 0.75rem;
     }
     
     .contact-logo-text {
