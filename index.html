@@ -15,7 +15,7 @@
     <nav class="navbar">
         <div class="navbar-container">
             <a href="#home" class="navbar-logo">
-                <img src="components/logo (1).png" alt="GO-DIGITAL" class="logo-image">
+                <span class="logo-text">GO-DIGITAL</span>
             </a>
             <ul class="navbar-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -343,12 +343,6 @@
                     <p class="project-description">Curated residences and planned communities reflecting diverse living experiences and strong delivery fundamentals.</p>
                 </div>
             </div>
-
-            <!-- Summary Block -->
-            <div class="projects-summary animate-on-scroll">
-                <h3 class="summary-title">Our Footprint in Premium Residences</h3>
-                <p class="summary-text">These projects reflect our strategic influence across residential consulting, market positioning, and execution support. Each represents a blend of design quality, lifestyle focus, and market resonance.</p>
-            </div>
         </div>
     </section>
 
@@ -458,6 +452,11 @@
     <!-- About Founder Section -->
     <section id="founder" class="founder-section">
         <div class="founder-container">
+            <!-- Section Heading -->
+            <div class="founder-section-heading animate-on-scroll">
+                <h2 class="founder-section-title">Our Founder</h2>
+            </div>
+            
             <div class="founder-content-wrapper">
                 <!-- Left Side - Image -->
                 <div class="founder-image-wrapper animate-on-scroll">
@@ -469,8 +468,7 @@
                     <!-- Founder Name -->
                     <div class="founder-header">
                         <h2 class="founder-name-display">KARAMALA PRADEEP</h2>
-                        <p class="founder-role">Founder. Principal Consultant.</p>
-                        <p class="founder-experience-text">20+ years shaping sales, strategy, and execution.</p>
+                        <p class="founder-intro-text">An industry expert with 20 years of experience in the areas of</p>
                     </div>
 
                     <!-- Narrative -->
@@ -478,41 +476,47 @@
                         <p class="narrative-text">An industry expert with over two decades of experience, Karamala Pradeep has built, scaled, and led high-performing sales organizations and business ecosystems within real estate.</p>
                     </div>
 
-                    <!-- Expertise Items - Two Column Layout -->
+                    <!-- Expertise Items - Single Vertical Column -->
                     <div class="founder-expertise-list">
-                        <!-- Left Column -->
-                        <div class="founder-expertise-column">
-                            <div class="founder-expertise-item animate-on-scroll">
+                        <div class="founder-expertise-item animate-on-scroll">
+                            <div class="expertise-header">
+                                <img src="founder/Sales & Marketing.png" alt="Sales & Marketing" class="expertise-icon">
                                 <h3 class="expertise-title">Sales & Marketing</h3>
-                                <p class="expertise-description">Building and executing comprehensive sales strategies that drive revenue growth and market presence through targeted campaigns and strategic positioning.</p>
-                            </div>
-
-                            <div class="founder-expertise-item animate-on-scroll">
-                                <h3 class="expertise-title">Sales Operations</h3>
-                                <p class="expertise-description">Optimizing sales processes, systems, and workflows to ensure efficiency, accountability, and consistent performance across sales teams.</p>
-                            </div>
-
-                            <div class="founder-expertise-item animate-on-scroll">
-                                <h3 class="expertise-title">Business Set-Up</h3>
-                                <p class="expertise-description">Establishing robust business foundations, from organizational structure to operational frameworks, ensuring scalable and sustainable growth.</p>
                             </div>
                         </div>
 
-                        <!-- Right Column -->
-                        <div class="founder-expertise-column">
-                            <div class="founder-expertise-item animate-on-scroll">
+                        <div class="founder-expertise-item animate-on-scroll">
+                            <div class="expertise-header">
+                                <img src="founder/Sales Operations.png" alt="Sales Operations" class="expertise-icon">
+                                <h3 class="expertise-title">Sales Operations</h3>
+                            </div>
+                        </div>
+
+                        <div class="founder-expertise-item animate-on-scroll">
+                            <div class="expertise-header">
+                                <img src="founder/Business Set-Up.png" alt="Business Set-Up" class="expertise-icon">
+                                <h3 class="expertise-title">Business Set-Up</h3>
+                            </div>
+                        </div>
+
+                        <div class="founder-expertise-item animate-on-scroll">
+                            <div class="expertise-header">
+                                <img src="founder/Digital Marketing, Sales Strategy & Execution.png" alt="Digital Marketing, Sales Strategy & Execution" class="expertise-icon">
                                 <h3 class="expertise-title">Digital Marketing, Sales Strategy & Execution</h3>
-                                <p class="expertise-description">Integrating digital channels with strategic sales approaches to maximize reach, engagement, and conversion through data-driven execution.</p>
                             </div>
+                        </div>
 
-                            <div class="founder-expertise-item animate-on-scroll">
+                        <div class="founder-expertise-item animate-on-scroll">
+                            <div class="expertise-header">
+                                <img src="founder/Team Building.png" alt="Team Building" class="expertise-icon">
                                 <h3 class="expertise-title">Team Building</h3>
-                                <p class="expertise-description">Cultivating high-performing teams through strategic recruitment, development, and leadership that drives organizational excellence.</p>
                             </div>
+                        </div>
 
-                            <div class="founder-expertise-item animate-on-scroll">
+                        <div class="founder-expertise-item animate-on-scroll">
+                            <div class="expertise-header">
+                                <img src="founder/Learning & Development.png" alt="Learning & Development" class="expertise-icon">
                                 <h3 class="expertise-title">Learning & Development</h3>
-                                <p class="expertise-description">Designing and implementing training programs that enhance capabilities, foster continuous improvement, and build organizational knowledge.</p>
                             </div>
                         </div>
                     </div>
@@ -524,16 +528,22 @@
     <!-- Delivered Section -->
     <section id="delivered" class="delivered-section">
         <div class="delivered-container">
-            <!-- Impact Box -->
-            <div class="delivered-impact-box animate-on-scroll">
+            <!-- Layer 1: Impact Number -->
+            <div class="delivered-impact-layer animate-on-scroll">
                 <p class="delivered-number" data-count="700">0+</p>
-                <p class="delivered-label">CR IN SALES DELIVERED</p>
-                <p class="delivered-subtext">AT GO-DIGITAL SINCE INCEPTION</p>
+                <div class="delivered-labels">
+                    <p class="delivered-label">CR IN SALES DELIVERED</p>
+                    <p class="delivered-subtext">AT GO-DIGITAL SINCE INCEPTION</p>
+                </div>
             </div>
-
-            <!-- Values Text -->
-            <div class="delivered-values animate-on-scroll">
-                <p class="delivered-values-text">Trust · Transparency · Integrity · Mutual Respect · Performance</p>
+            
+            <!-- Layer 2: Values Sequence -->
+            <div class="delivered-values-layer">
+                <div class="delivered-value-item animate-on-scroll" data-delay="0.2">Trust</div>
+                <div class="delivered-value-item animate-on-scroll" data-delay="0.4">Transparency</div>
+                <div class="delivered-value-item animate-on-scroll" data-delay="0.6">Integrity</div>
+                <div class="delivered-value-item animate-on-scroll" data-delay="0.8">Mutual Respect</div>
+                <div class="delivered-value-item animate-on-scroll" data-delay="1.0">Performance</div>
             </div>
         </div>
     </section>
@@ -543,64 +553,63 @@
         <div class="strategy-container">
             <!-- Header -->
             <div class="strategy-header animate-on-scroll">
-                <p class="strategy-label">STRATEGY</p>
-                <h2 class="strategy-headline">How We Approach Growth</h2>
+                <h2 class="strategy-headline">OUR STRATEGY</h2>
             </div>
 
-            <!-- Circular Containers Layout -->
-            <div class="strategy-circles-layout">
-                <!-- Strategy Item 1 -->
-                <div class="strategy-circle-item animate-on-scroll" data-strategy="1">
-                    <div class="strategy-circle-container">
-                        <img src="strategy/12297176_4884076.jpg" alt="Market Research" class="strategy-circle-img">
+            <!-- Strategy Cards Grid Layout -->
+            <div class="strategy-cards-grid">
+                <!-- Strategy Card 1 -->
+                <div class="strategy-card animate-on-scroll" data-strategy="1">
+                    <div class="strategy-card-icon">
+                        <img src="strategy/Market Research.png" alt="Market Research" class="strategy-icon-img">
                     </div>
-                    <h3 class="strategy-circle-title">Market Research</h3>
-                    <p class="strategy-circle-description">Understanding the landscape, market trends, competitor positioning, and evolving customer needs before making any strategic move.</p>
+                    <h3 class="strategy-card-title">Market Research</h3>
+                    <p class="strategy-card-description">Understanding the landscape, market trends, competitor positioning, and evolving customer needs before making any strategic move.</p>
                 </div>
 
-                <!-- Strategy Item 2 -->
-                <div class="strategy-circle-item animate-on-scroll" data-strategy="2">
-                    <div class="strategy-circle-container">
-                        <img src="strategy/19643597_Social_Networking_and_Communications_49_.jpg" alt="Target Audience" class="strategy-circle-img">
+                <!-- Strategy Card 2 -->
+                <div class="strategy-card animate-on-scroll" data-strategy="2">
+                    <div class="strategy-card-icon">
+                        <img src="strategy/Target Audience.png" alt="Target Audience" class="strategy-icon-img">
                     </div>
-                    <h3 class="strategy-circle-title">Target Audience</h3>
-                    <p class="strategy-circle-description">Defining exactly who we are speaking to by building a clear and focused customer profile aligned with the offering.</p>
+                    <h3 class="strategy-card-title">Target Audience</h3>
+                    <p class="strategy-card-description">Defining exactly who we are speaking to by building a clear and focused customer profile aligned with the offering.</p>
                 </div>
 
-                <!-- Strategy Item 3 -->
-                <div class="strategy-circle-item animate-on-scroll" data-strategy="3">
-                    <div class="strategy-circle-container">
-                        <img src="strategy/24122457_bwink_sci_01_single_10.svg" alt="Value Proposition" class="strategy-circle-img">
+                <!-- Strategy Card 3 -->
+                <div class="strategy-card animate-on-scroll" data-strategy="3">
+                    <div class="strategy-card-icon">
+                        <img src="strategy/Value Proposition.png" alt="Value Proposition" class="strategy-icon-img">
                     </div>
-                    <h3 class="strategy-circle-title">Value Proposition</h3>
-                    <p class="strategy-circle-description">Clarifying why customers should choose one brand over alternatives by identifying what makes the offering distinct and relevant.</p>
+                    <h3 class="strategy-card-title">Value Proposition</h3>
+                    <p class="strategy-card-description">Clarifying why customers should choose one brand over alternatives by identifying what makes the offering distinct and relevant.</p>
                 </div>
 
-                <!-- Strategy Item 4 -->
-                <div class="strategy-circle-item animate-on-scroll" data-strategy="4">
-                    <div class="strategy-circle-container">
-                        <img src="strategy/337734335_7a6484a7-fe69-4199-b3be-f8ebd8a7cd98.jpg" alt="Marketing Channels" class="strategy-circle-img">
+                <!-- Strategy Card 4 -->
+                <div class="strategy-card animate-on-scroll" data-strategy="4">
+                    <div class="strategy-card-icon">
+                        <img src="strategy/Marketing Channels.png" alt="Marketing Channels" class="strategy-icon-img">
                     </div>
-                    <h3 class="strategy-circle-title">Marketing Channels</h3>
-                    <p class="strategy-circle-description">Selecting the right platforms and mediums — from digital to on-ground — to ensure effective reach and engagement.</p>
+                    <h3 class="strategy-card-title">Marketing Channels</h3>
+                    <p class="strategy-card-description">Selecting the right platforms and mediums — from digital to on-ground — to ensure effective reach and engagement.</p>
                 </div>
 
-                <!-- Strategy Item 5 -->
-                <div class="strategy-circle-item animate-on-scroll" data-strategy="5">
-                    <div class="strategy-circle-container">
-                        <img src="strategy/417373527_a5497d67-6278-4965-8414-c083d38fc79f.jpg" alt="Content Strategy" class="strategy-circle-img">
+                <!-- Strategy Card 5 -->
+                <div class="strategy-card animate-on-scroll" data-strategy="5">
+                    <div class="strategy-card-icon">
+                        <img src="strategy/Content Strategy-.png" alt="Content Strategy" class="strategy-icon-img">
                     </div>
-                    <h3 class="strategy-circle-title">Content Strategy</h3>
-                    <p class="strategy-circle-description">Designing messaging, visuals, and stories that attract attention, build engagement, and encourage conversion.</p>
+                    <h3 class="strategy-card-title">Content Strategy</h3>
+                    <p class="strategy-card-description">Designing messaging, visuals, and stories that attract attention, build engagement, and encourage conversion.</p>
                 </div>
 
-                <!-- Strategy Item 6 -->
-                <div class="strategy-circle-item animate-on-scroll" data-strategy="6">
-                    <div class="strategy-circle-container">
-                        <img src="strategy/417992780_26d1b55a-9bd0-4c22-a6ed-a63ae0410f84.jpg" alt="Marketing Campaigns" class="strategy-circle-img">
+                <!-- Strategy Card 6 -->
+                <div class="strategy-card animate-on-scroll" data-strategy="6">
+                    <div class="strategy-card-icon">
+                        <img src="strategy/Marketing Campaigns.png" alt="Marketing Campaigns" class="strategy-icon-img">
                     </div>
-                    <h3 class="strategy-circle-title">Marketing Campaigns</h3>
-                    <p class="strategy-circle-description">Planning focused initiatives aligned with defined objectives, whether awareness, lead generation, or sales outcomes.</p>
+                    <h3 class="strategy-card-title">Marketing Campaigns</h3>
+                    <p class="strategy-card-description">Planning focused initiatives aligned with defined objectives, whether awareness, lead generation, or sales outcomes.</p>
                 </div>
             </div>
         </div>
@@ -611,9 +620,7 @@
         <div class="scope-container">
             <!-- Header -->
             <div class="scope-header animate-on-scroll">
-                <p class="scope-label">SCOPE OF WORK</p>
-                <h2 class="scope-title">STRATEGIC PARTNERSHIP</h2>
-                <p class="scope-subtitle">GO-DIGITAL will come onboard as Strategic Partner for Sales & Marketing.</p>
+                <h2 class="scope-title">SCOPE OF WORK</h2>
             </div>
 
             <!-- Carousel Container -->
@@ -630,12 +637,9 @@
                     <div class="scope-carousel-inner">
                         <!-- Card 1 -->
                         <div class="scope-card animate-on-scroll">
+                            <div class="scope-card-number">01</div>
                             <div class="scope-card-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <img src="components/images/Campaigns.jpg" alt="Campaigns" class="scope-card-icon-img">
                             </div>
                             <h3 class="scope-card-title">Campaigns (Digital & Local)</h3>
                             <ul class="scope-card-list">
@@ -648,13 +652,9 @@
 
                         <!-- Card 2 -->
                         <div class="scope-card animate-on-scroll">
+                            <div class="scope-card-number">02</div>
                             <div class="scope-card-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45768C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <img src="components/images/Lead Generation & Connects..jpg" alt="Lead Generation" class="scope-card-icon-img">
                             </div>
                             <h3 class="scope-card-title">Lead Generation & Connects</h3>
                             <ul class="scope-card-list">
@@ -667,11 +667,9 @@
 
                         <!-- Card 3 -->
                         <div class="scope-card animate-on-scroll">
+                            <div class="scope-card-number">03</div>
                             <div class="scope-card-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <img src="components/images/Site Visit Fixing..jpg" alt="Site Visit Fixing" class="scope-card-icon-img">
                             </div>
                             <h3 class="scope-card-title">Site Visit Fixing</h3>
                             <ul class="scope-card-list">
@@ -684,14 +682,9 @@
 
                         <!-- Card 4 -->
                         <div class="scope-card animate-on-scroll">
+                            <div class="scope-card-number">04</div>
                             <div class="scope-card-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M10 9H9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <img src="components/images/Site Visit Execution.jpg" alt="Site Visit Execution" class="scope-card-icon-img">
                             </div>
                             <h3 class="scope-card-title">Site Visit Execution</h3>
                             <ul class="scope-card-list">
@@ -704,12 +697,9 @@
 
                         <!-- Card 5 -->
                         <div class="scope-card animate-on-scroll">
+                            <div class="scope-card-number">05</div>
                             <div class="scope-card-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <img src="components/images/Negotiations and Closures.png" alt="Negotiations" class="scope-card-icon-img">
                             </div>
                             <h3 class="scope-card-title">Negotiations and Closures</h3>
                             <ul class="scope-card-list">
@@ -722,18 +712,9 @@
 
                         <!-- Card 6 -->
                         <div class="scope-card animate-on-scroll">
+                            <div class="scope-card-number">06</div>
                             <div class="scope-card-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2V6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M12 18V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M4.93 4.93L7.76 7.76" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M16.24 16.24L19.07 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M2 12H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M18 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M4.93 19.07L7.76 16.24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M16.24 7.76L19.07 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <img src="components/images/Banking & Collections..png" alt="Banking" class="scope-card-icon-img">
                             </div>
                             <h3 class="scope-card-title">Banking & Collections</h3>
                             <ul class="scope-card-list">
@@ -746,13 +727,9 @@
 
                         <!-- Card 7 -->
                         <div class="scope-card animate-on-scroll">
+                            <div class="scope-card-number">07</div>
                             <div class="scope-card-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <img src="components/images/Sale Agreements.png" alt="Sale Agreements" class="scope-card-icon-img">
                             </div>
                             <h3 class="scope-card-title">Sale Agreements</h3>
                             <ul class="scope-card-list">
@@ -765,11 +742,9 @@
 
                         <!-- Card 8 -->
                         <div class="scope-card animate-on-scroll">
+                            <div class="scope-card-number">08</div>
                             <div class="scope-card-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <img src="components/images/Legal Coordinations.png" alt="Legal Coordinations" class="scope-card-icon-img">
                             </div>
                             <h3 class="scope-card-title">Legal Coordinations</h3>
                             <ul class="scope-card-list">
@@ -782,11 +757,9 @@
 
                         <!-- Card 9 -->
                         <div class="scope-card animate-on-scroll">
+                            <div class="scope-card-number">09</div>
                             <div class="scope-card-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <img src="components/images/Registrations & Sale Deed.png" alt="Registrations" class="scope-card-icon-img">
                             </div>
                             <h3 class="scope-card-title">Registrations & Sale Deed</h3>
                             <ul class="scope-card-list">
@@ -817,7 +790,7 @@
                 <!-- Column 1 - Logo -->
                 <div class="contact-column contact-column-brand animate-on-scroll">
                     <div class="contact-logo-container">
-                        <img src="components/logo (1).png" alt="GO-DIGITAL" class="contact-logo-image">
+                        <span class="contact-logo-text">GO-DIGITAL</span>
                     </div>
                 </div>
 
@@ -825,15 +798,19 @@
                 <div class="contact-column contact-column-info animate-on-scroll">
                     <div class="contact-info-item">
                         <span class="contact-info-label">Address:</span>
-                        <span class="contact-info-value">RR Nagar, Bangalore</span>
+                        <a href="https://www.bing.com/maps/search?q=Mahadevapura+Main+Road%2C+%23A+2%2C+Nestar+Raga%2C+Bengaluru+East%2C+Karnataka%2C+IN&cp=12.993969%7E77.689444&lvl=16&style=r" target="_blank" rel="noopener noreferrer" class="contact-info-value">185/1, 22nd Cross Rd, Jayanagar 6th Block, Jayanagar, Bengaluru, Karnataka 560070</a>
                     </div>
                     <div class="contact-info-item">
                         <span class="contact-info-label">Email:</span>
                         <a href="mailto:karamalapradeep@go-digital.in" class="contact-info-value">karamalapradeep@go-digital.in</a>
                     </div>
                     <div class="contact-info-item">
-                        <span class="contact-info-label">Phone Number:</span>
+                        <span class="contact-info-label">Phone:</span>
                         <a href="tel:+919686801199" class="contact-info-value">+91 96868 01199</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-info-label">LinkedIn:</span>
+                        <a href="https://www.linkedin.com/company/go-digital-enterprises/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" class="contact-info-value">Go Digital Enterprises</a>
                     </div>
                 </div>
 
@@ -890,7 +867,7 @@
                                         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </a>
-                                <a href="#" class="social-icon" aria-label="LinkedIn">
+                                <a href="https://www.linkedin.com/company/go-digital-enterprises/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>

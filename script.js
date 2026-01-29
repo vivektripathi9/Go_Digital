@@ -325,9 +325,9 @@ if (projectCards.length > 0) {
     });
 }
 
-// Strategy Section - Circular Containers Animations
-const strategyCircleItems = document.querySelectorAll('.strategy-circle-item');
-if (strategyCircleItems.length > 0) {
+// Strategy Section - Cards Animations
+const strategyCards = document.querySelectorAll('.strategy-card');
+if (strategyCards.length > 0) {
     const strategyObserverOptions = {
         threshold: 0.15,
         rootMargin: '0px 0px -80px 0px'
@@ -343,8 +343,8 @@ if (strategyCircleItems.length > 0) {
         });
     }, strategyObserverOptions);
     
-    strategyCircleItems.forEach(item => {
-        strategyObserver.observe(item);
+    strategyCards.forEach(card => {
+        strategyObserver.observe(card);
     });
 }
 
@@ -362,9 +362,13 @@ const totalCards = scopeCards.length;
 function getCardDimensions() {
     const viewportWidth = window.innerWidth;
     if (viewportWidth <= 480) {
-        return { width: 280, gap: 16 }; // Small mobile
+        return { width: 280, gap: 16 }; // Very small mobile - 1 card
     } else if (viewportWidth <= 768) {
-        return { width: 320, gap: 24 }; // Mobile
+        // Mobile - 2 cards, calculate width to fit 2 cards with gap
+        const availableWidth = viewportWidth - 40; // Account for padding
+        const gap = 16;
+        const cardWidth = (availableWidth - gap) / 2;
+        return { width: cardWidth, gap: gap };
     } else if (viewportWidth <= 1024) {
         return { width: 350, gap: 28 }; // Tablet
     } else {
@@ -375,9 +379,10 @@ function getCardDimensions() {
 // Calculate how many cards can fit in viewport
 function getCardsPerView() {
     const viewportWidth = window.innerWidth;
-    if (viewportWidth <= 768) return 1;
-    if (viewportWidth <= 1024) return 2;
-    return 3;
+    if (viewportWidth <= 480) return 1; // Very small mobile - show 1
+    if (viewportWidth <= 768) return 2; // Mobile - show 2
+    if (viewportWidth <= 1024) return 2; // Tablet - show 2
+    return 3; // Desktop - show 3 (always show 3)
 }
 
 // Update carousel position
@@ -475,36 +480,7 @@ if (scopeCards.length > 0) {
 }
 
 // Contact Section - Anchor + Action Layout Animations
-const contactEntry = document.querySelector('.contact-entry');
-const contactIdentityContent = document.querySelector('.contact-identity-content');
-const contactActionContent = document.querySelector('.contact-action-content');
-
-if (contactEntry) {
-    const contactObserverOptions = {
-        threshold: 0.3,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const contactObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                if (entry.target === contactEntry) {
-                    entry.target.classList.add('animated');
-                }
-                if (entry.target === contactIdentityContent) {
-                    entry.target.classList.add('animated');
-                }
-                if (entry.target === contactActionContent) {
-                    entry.target.classList.add('animated');
-                }
-            }
-        });
-    }, contactObserverOptions);
-    
-    if (contactEntry) contactObserver.observe(contactEntry);
-    if (contactIdentityContent) contactObserver.observe(contactIdentityContent);
-    if (contactActionContent) contactObserver.observe(contactActionContent);
-}
+// (Removed - contact section now uses .contact-column animations below)
 
 // Sign Up Button Handler - Open Modal
 const signUpBtn = document.getElementById('signUpBtn');
@@ -604,33 +580,49 @@ if (contactForm) {
     });
 }
 
-// Delivered Section - Scroll Animations with Number Count-Up
-const deliveredImpactBox = document.querySelector('.delivered-impact-box');
-const deliveredValues = document.querySelector('.delivered-values');
+// Delivered Section - Premium Impact & Values Animation
+const deliveredSection = document.querySelector('.delivered-section');
+const deliveredImpactLayer = document.querySelector('.delivered-impact-layer');
 const deliveredNumber = document.querySelector('.delivered-number');
+const deliveredValueItems = document.querySelectorAll('.delivered-value-item');
 
-if (deliveredImpactBox || deliveredValues) {
+if (deliveredSection) {
     const deliveredObserverOptions = {
-        threshold: 0.3,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
     };
     
     const deliveredObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
                 entry.target.classList.add('animated');
                 
-                // Trigger count-up animation for number
-                if (entry.target === deliveredImpactBox && deliveredNumber && !deliveredNumber.classList.contains('counted')) {
-                    deliveredNumber.classList.add('counted');
-                    animateDeliveredCountUp(deliveredNumber, 0, 700, 2000);
+                // Animate impact layer first
+                if (deliveredImpactLayer) {
+                    deliveredImpactLayer.classList.add('animated');
+                    
+                    // Trigger count-up animation for number
+                    if (deliveredNumber && !deliveredNumber.classList.contains('counted')) {
+                        deliveredNumber.classList.add('counted');
+                        const targetCount = parseInt(deliveredNumber.getAttribute('data-count')) || 700;
+                        animateDeliveredCountUp(deliveredNumber, 0, targetCount, 2000);
+                    }
+                }
+                
+                // Animate values one by one with staggered delays
+                if (deliveredValueItems.length > 0) {
+                    deliveredValueItems.forEach((item, index) => {
+                        const delay = parseFloat(item.getAttribute('data-delay')) || (index * 0.2);
+                        setTimeout(() => {
+                            item.classList.add('animated');
+                        }, delay * 1000);
+                    });
                 }
             }
         });
     }, deliveredObserverOptions);
     
-    if (deliveredImpactBox) deliveredObserver.observe(deliveredImpactBox);
-    if (deliveredValues) deliveredObserver.observe(deliveredValues);
+    deliveredObserver.observe(deliveredSection);
 }
 
 // Count-up animation for delivered number
@@ -674,9 +666,9 @@ if (contactColumns.length > 0) {
     });
 }
 
-const expertiseItems = document.querySelectorAll('.expertise-list li');
+const expertiseItems = document.querySelectorAll('.founder-expertise-item');
 expertiseItems.forEach((item, index) => {
-    item.style.transitionDelay = `${index * 0.03}s`;
+    // Animation delay is handled by Intersection Observer
 });
 
 // Initialize page load animation
